@@ -1,0 +1,24 @@
+﻿l_english:
+ roc_equipment_0:0 "Align the Manufacturers"
+ roc_equipment_0_desc:0 "The doctrine of the reorganized Neo-KMT espouses a firm military industrial complex that is intertwined with both the party and the state, functioning as a combined organ. Using this, we can streamline our weapons research and catch up with the Japanese."
+ roc_equipment_1:0 "Militarized Field Support"
+ roc_equipment_1_desc:0 "A large reason why we suffered so many casualties during the Russo-Japanese invasion was a lack of effective field support. New squad automatic weapons and better functioning support equipment will help us alleviate these concerns."
+ roc_equipment_1:0 "Full Calibration"
+ roc_equipment_1_desc:0 "Aligning our weapons manufacturers was a step in the right direction, but we have not yet gone far enough. By truly integrating the pervasive influence of the party into every aspect of weapons development, we can calibrate Military R&D in accordance to our whims."
+
+ roc_fix_army_0:0 "Restructure the Army"
+ roc_fix_army_0_desc:0 "The Chinese army has been weakened by liberalism and conniving outside forces. It must be re-organized among Paigeist lines if we are to have any chance of successfully dealing with our officer deficit."
+ roc_fix_army_1:0 "Reopen Whampoa"
+ roc_fix_army_1_desc:0 "Expanding our military academies will allow us to diffuse information gained in prior wars against the Russians and Japanese, and allow us to train a loyal army led by skilled and ideologically acceptable officers."
+ roc_fix_army_2:0 "Moral Indoctrination"
+ roc_fix_army_2_desc:0 "The officers that leave our academies must be as fiery and devoted as the rhetoric that they are trained on. Death to the Japanese occupiers! We will march to Shenyang, then Busan, and Tokyo, until we set the Rising Sun itself to the flame and avenge our brothers!"
+ roc_fix_army_3:0 "Rain of Steel"
+ roc_fix_army_3_desc:0 "Though Zhang herself is an artillery officer, the armored doctrine espoused by the French is quite appealing. Using our deep military cooperation, we can permanently borrow these designs. I'm sure Paige won't mind anyways."
+
+ roc_nextwar_1:0 "Collaborate with the French"
+ roc_nextwar_1_desc:0 "We should increase the volume of attaches sent between us and the French Empire. As one of our closest allies and a leading power in military development, we can learn much from their military doctrine, while offering them an opportunity to test out their weaponry during our constant border skirmishes with the accursed Zhili.
+ roc_nextwar_2:0 "Joint FGDC Exercises"
+ roc_nextwar_2_desc:0 "Alas, it will be so long	before we can test our new doctrines against the Japanese! Let's try them on the French first."
+
+ roc_wansui:0 "Dead of Night"
+ roc_wansui_desc:0 "Past records of the original Kuomintang show that night barrages and sudden attacks were incredibly effective at dispelling attacking forces. By emulating these tactics, we can soften up our opponents in the dead of night, before engaging them after depriving them of sleep."

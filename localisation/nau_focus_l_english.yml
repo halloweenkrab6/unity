@@ -1,0 +1,31 @@
+﻿l_english:
+ nau_setup_1:0 "Approach of the Accords"
+ nau_setup_1_desc:0 "z"
+ nau_meet_lee:0 "Assure the Guards"
+ nau_meet_tyler:0 "House of Cards"
+ nau_meet_huron:0 "Address the Economy"
+ nau_meet_vincent:0 "The King of Hearts"
+ nau_vanguard_cope:0 "Whispers of the Vanguard"
+ nau_meet_phoenix:0 "The Progidal Son"
+ nau_meet_una:0 "Convene the UNA"
+
+    # BRAZIL BRANCH #
+
+ nau_brazil_1:0 "Shadows over Amazonia"
+ nau_rio_conference:0 "Start the Rio Conference"
+ nau_huron_wholesome:0 "A Way Forward"
+ nau_lee_evil:0 "Cover Amazonia's Skies"
+ nau_ontarion_veto:0 "Cull the Insubordinate"
+ nau_brazil_2:0 "One Way Or Another"
+
+    # FRANCE BRANCH #
+
+ nau_setup_2:0 "The Parisian Madman"
+ nau_negotiate_paige:0 "Bite the Sour Apple"
+ nau_peace_chance_up:0 "A Calming Wave"
+ nau_kill_paige:0 "Heed No Paigeist"
+ nau_peace_chance_down:0 "The Spark Ignites"
+ nau_deal_with_tension:0 "Nothing Truly Certain"
+ nau_aggressive:0 "By Any Means Necessary"
+ nau_brinksmanship:0 "On The Brink"
+ nau_defensive:0 "What We've Built"
