@@ -1,0 +1,7 @@
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_idea_nau_decadence"
+		texturefile = "gfx/interface/ideas/nau_decadence.dds"
+	}
+}
+
