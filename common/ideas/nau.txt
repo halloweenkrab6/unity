@@ -1,0 +1,22 @@
+ideas = {
+
+	country = {
+		NAU_decadence = {
+			picture = GFX_idea_nau_decadence
+			
+			allowed = {
+				tag = NAU
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 1.0
+				consumer_goods_factor = 0.8
+				industrial_capacity_factory = -0.2
+			}
+		}

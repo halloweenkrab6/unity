@@ -1,0 +1,510 @@
+﻿
+focus_tree = {
+	id = nau_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = NAU		
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+
+	focus = {
+		id = nau_setup_1
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 14
+		y = 0
+		cost = 1
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 25
+			remove_ideas = ROC_meatgrinder_0
+			add_ideas = ROC_meatgrinder_1
+		}
+	}
+	focus = {
+		id = nau_meet_lee
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = nau_setup_1 }
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = nau_setup_1
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+		}
+	}
+}
+	focus = {
+		id = nau_meet_huron
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = nau_setup_1 }
+		x = 2
+		y = 1
+		relative_position_id = nau_setup_1
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+		}
+	}
+}
+	focus = {
+		id = nau_meet_vincent
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = nau_meet_lee }
+		x = 0
+		y = 1
+		relative_position_id = nau_meet_lee
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 25
+			remove_ideas = ROC_meatgrinder_1
+			add_ideas = ROC_meatgrinder_2
+		}
+	}
+
+	focus = {
+		id = nau_meet_phoenix
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = nau_meet_huron }
+		x = 0
+		y = 1
+		relative_position_id = nau_meet_huron
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+		}
+	}
+}
+	focus = {
+		id = nau_meet_tyler
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = nau_setup_1 }
+		x = 0
+		y = 1
+		relative_position_id = nau_setup_1
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+		}
+	}
+}
+		focus = {
+		id = nau_vanguard_cope
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = nau_meet_tyler }
+		x = 0
+		y = 1
+		relative_position_id = nau_meet_tyler
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+		}
+	}
+}
+
+
+	focus = {
+		id = nau_meet_una
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = nau_vanguard_cope }
+		prerequisite = { focus = nau_meet_vincent }
+		prerequisite = { focus = nau_meet_phoenix }
+		x = 0
+		y = 3
+		relative_position_id = nau_setup_1
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 25
+			remove_ideas = ROC_meatgrinder_2
+			add_ideas = ROC_meatgrinder_3
+		}
+	}
+	focus = {
+		id = nau_setup_2
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = nau_meet_una }
+		x = 3
+		y = 1
+		relative_position_id = nau_meet_una
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+		}
+	}
+}
+	focus = {
+		id = nau_negotiate_paige
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = nau_setup_2 }
+		mutually_exclusive = { focus = nau_kill_paige }
+		x = -1
+		y = 1
+		relative_position_id = nau_setup_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+		}
+	}
+}
+	focus = {
+		id = nau_peace_chance_up
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = nau_negotiate_paige }
+		x = 0
+		y = 1
+		relative_position_id = nau_negotiate_paige
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+		}
+	}
+}
+	focus = {
+		id = nau_kill_paige
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = nau_setup_2 }
+		x = 1
+		y = 1
+		relative_position_id = nau_setup_2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = ROC_nightraid
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = nau_peace_chance_down
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = nau_kill_paige }
+		x = 0
+		y = 1
+		relative_position_id = nau_kill_paige
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			add_ideas = ROC_creeping_barrage
+		}
+	}
+		focus = {
+		id = nau_deal_with_tension
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = nau_peace_chance_up focus = nau_peace_chance_down }
+		x = -1
+		y = 1
+		relative_position_id = nau_peace_chance_down
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+		}
+	}
+}
+		focus = {
+		id = nau_brazil_1	
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = nau_meet_una }
+		x = -3
+		y = 1
+		relative_position_id = nau_meet_una
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+		}
+	}
+}
+		focus = {
+		id = nau_rio_conference
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = nau_brazil_1 }
+		mutually_exclusive = { focus = nau_lee_evil }
+		x = -1
+		y = 1
+		relative_position_id = nau_brazil_1
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+		}
+	}
+}
+	focus = {
+		id = nau_huron_wholesome
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = nau_rio_conference }
+		x = 0
+		y = 1
+		relative_position_id = nau_rio_conference
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+		}
+	}
+}
+	focus = {
+		id = nau_lee_evil
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = nau_brazil_1 }
+		x = 1
+		y = 1
+		relative_position_id = nau_brazil_1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = ROC_nightraid
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = nau_ontarion_veto
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = nau_lee_evil }
+		x = 0
+		y = 1
+		relative_position_id = nau_lee_evil
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			add_ideas = ROC_creeping_barrage
+		}
+	}
+
+	focus = {
+		id = nau_brazil_2
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = nau_huron_wholesome focus = nau_ontarion_veto }
+		x = -1
+		y = 1
+		relative_position_id = nau_ontarion_veto
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			remove_ideas = ROC_creeping_barrage
+			add_ideas = ROC_creeping_barrage_upgrade
+		}
+	}
+	focus = {
+		id = nau_aggressive
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = nau_brazil_2 }
+		prerequisite = { focus = nau_deal_with_tension }
+		x = 1
+		y = 1
+		relative_position_id = nau_brazil_2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			remove_ideas = ROC_creeping_barrage
+			add_ideas = ROC_creeping_barrage_upgrade
+		}
+	}
+	focus = {
+		id = nau_brinksmanship
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = nau_brazil_2 }
+		prerequisite = { focus = nau_deal_with_tension }
+		x = 3
+		y = 1
+		relative_position_id = nau_brazil_2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			remove_ideas = ROC_creeping_barrage
+			add_ideas = ROC_creeping_barrage_upgrade
+		}
+	}
+	focus = {
+		id = nau_defensive
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = nau_brazil_2 }
+		prerequisite = { focus = nau_deal_with_tension }
+		x = 5
+		y = 1
+		relative_position_id = nau_brazil_2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			remove_ideas = ROC_creeping_barrage
+			add_ideas = ROC_creeping_barrage_upgrade
+		}
+	}
+	
+
